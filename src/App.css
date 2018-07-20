@@ -1,0 +1,102 @@
+.form-logo{
+  display: block;
+  width: 213px;
+  margin: 34px auto;
+}
+form{
+  display: flex;
+  width: 440px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 34px 60px;
+  box-sizing: border-box;
+  border: 1px solid #999999;
+  border-radius: 5.51px;
+}
+input{
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  margin-bottom: 34px;
+  padding: 10px 40px;
+}
+.email-wrapper,
+.password-wrapper{
+  position: relative;
+}
+.email-wrapper::before,
+.password-wrapper::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 12px;
+  left:14px;
+  width: 14px;
+  height: 13px;
+  z-index: 1;
+}
+.email-wrapper::before{
+  background: url('email-ico.png') no-repeat center;
+}
+.password-wrapper::before{
+  background: url('pass-ico.png') no-repeat center;
+}
+.password-wrapper.error::after,
+.email-wrapper.error::after{
+  content: '';
+  position: absolute;
+  top: 13px;
+  right: -20px;
+  width: 10px;
+  height: 10px;
+  background: url('error.png');
+}
+.password-wrapper.normal::after,
+.email-wrapper.normal::after{
+  content: '';
+  position: absolute;
+  top: 13px;
+  right: -20px;
+  width: 11px;
+  height: 11px;
+  background: url('normal.png');
+}
+.password-wrapper.normal input,
+.email-wrapper.normal input{
+  border: 1px solid #159454;
+}
+.message{
+  display: none;
+  font-size: 11px;
+  color: #ed1f24;
+}
+.password-wrapper.show .message,
+.email-wrapper.show .message{
+  display: block;
+  position: absolute;
+  top: 20px;
+}
+button{
+  width: 90px;
+  height: 40px;
+  font-size: 18px;
+  letter-spacing: -0.18px;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 2px 4px 0 0 #2d7f96;
+  background-color: #36a2c1;
+}
+span{
+  font-size: 12px;
+  color: #666666;
+  letter-spacing: -0.12px;
+  margin-top: 20px;
+}
+span a{
+  text-decoration: none;
+  color: #2d7f96;
+}
